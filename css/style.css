@@ -19,6 +19,54 @@ html {
   scroll-behavior: smooth;
 }
 
+html.site-booting #app-wrapper {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+#site-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg);
+}
+
+html.site-booting #site-loader {
+  display: flex;
+}
+
+.site-loader-dot {
+  width: 12px;
+  height: 12px;
+  margin: 0 4px;
+  border-radius: 999px;
+  background: var(--color-primary);
+  animation: site-loader-bounce 0.8s ease-in-out infinite;
+}
+
+.site-loader-dot:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.site-loader-dot:nth-child(3) {
+  animation-delay: 0.24s;
+}
+
+@keyframes site-loader-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translateY(-8px);
+    opacity: 1;
+  }
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: var(--color-bg);
@@ -131,6 +179,12 @@ body {
   font-size: 14px;
   box-shadow: 0 4px 12px rgba(255, 184, 48, 0.3);
   font-family: 'Montserrat', sans-serif;
+}
+
+.vending-badge:empty,
+.btn-vending:empty,
+.btn-secondary:empty {
+  display: none;
 }
 
 .pulse-badge {

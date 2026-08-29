@@ -7,7 +7,7 @@
 // const API_URL = "https://cms.samakan.com/api/public/site"; // <-- UBAH kalau endpoint kamu beda
 // const ASSET_BASE = "http://cms.samakan.com"; // contoh: "https://domain.com" kalau image path perlu absolute
 const API_URL = "https://cms.samakan.id/api/public/site";
-const ASSET_BASE = "https//cms.samakan.id";
+const ASSET_BASE = "https://cms.samakan.id";
 
 let SITE = null;
 let LANG = "id";
@@ -467,7 +467,7 @@ function renderLocations() {
 
   setText(qs("#locations span#locations-badge"), pickLang(locations, "badge"));
   setText(qs("#locations h2#locations-title"), pickLang(locations, "title"));
-  setText(qs("#locations p#locations-desc"), pickLang(locations, "subtitle"));
+  setText(qs("#locations-desc"), pickLang(locations, "subtitle"));
 
   const grid = qs("#locations .grid.grid-cols-2.md\\:grid-cols-3.lg\\:grid-cols-5.gap-6");
   if (!grid) return;
@@ -516,6 +516,7 @@ function renderPartners() {
   const navbar = SITE?.navbar;
   if (!partners) return;
 
+  setText(qs("#partners span[data-i18n='trusted_by']"), pickLang(partners, "badge"));
   setText(qs("#partners h1[data-i18n='partners_page_title']"), pickLang(partners, "title"));
   setText(qs("#partners p[data-i18n='partners_page_desc']"), pickLang(partners, "subtitle"));
 
@@ -757,6 +758,10 @@ window.__SAMAKAN_APPLY_LANGUAGE__ = function applyLanguage(lang) {
   toggleLangButtons();
 };
 
+function revealSite() {
+  document.documentElement.classList.remove("site-booting");
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
   try {
     const res = await fetch(API_URL, { headers: { Accept: "application/json" } });
@@ -771,5 +776,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     window.__SAMAKAN_APPLY_LANGUAGE__(pendingLang || LANG);
   } catch (err) {
     console.error("Failed to load site data:", err);
+  } finally {
+    revealSite();
   }
 });

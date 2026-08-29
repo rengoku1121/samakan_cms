@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="h-full">
+<html lang="id" class="h-full site-booting">
 
 <head>
   <meta charset="UTF-8">
@@ -15,6 +15,11 @@
 </head>
 
 <body class="h-full">
+  <div id="site-loader" aria-hidden="true">
+    <span class="site-loader-dot"></span>
+    <span class="site-loader-dot"></span>
+    <span class="site-loader-dot"></span>
+  </div>
   <div id="app-wrapper" class="w-full h-full overflow-auto">
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md vending-shadow">
@@ -29,19 +34,7 @@
           </a>
           
           <!-- Desktop Navigation -->
-          <div class="hidden desk:flex items-center space-x-8">
-            <a href="#home" class="font-bold text-gray-700 hover:text-orange-500 transition-colors">Home</a>
-            <a href="#about" class="font-bold text-gray-700 hover:text-orange-500 transition-colors">About</a> 
-            <a href="#services" class="font-bold text-gray-700 hover:text-orange-500 transition-colors">Services</a> 
-            <!-- <a href="#how-it-works" class="font-bold text-gray-700 hover:text-orange-500 transition-colors">How It Works</a> -->
-            <!-- <a href="#early-program" class="font-bold text-gray-700 hover:text-orange-500 transition-colors">Early Program</a> -->
-            <a href="#gallery" class="font-bold text-gray-700 hover:text-orange-500 transition-colors">Gallery</a> 
-            <a href="#locations" class="font-bold text-gray-700 hover:text-orange-500 transition-colors">Locations</a> 
-            <a href="#partners" class="font-bold text-gray-700 hover:text-orange-500 transition-colors">Partners</a>
-            <!-- <a href="#contact-form" 
-              class="font-bold text-gray-700 hover:text-orange-500 transition-colors"
-              data-i18n="nav_contact">Contact Form</a> -->
-          </div>
+          <div class="hidden desk:flex items-center space-x-8"></div>
           
           <!-- Language Toggle & CTA -->
           <div class="hidden desk:flex items-center space-x-4">
@@ -49,7 +42,7 @@
                 id="lang-id" onclick="setLanguage('id')"
                 class="px-4 py-2 text-sm font-bold rounded-full transition-all">ID</button> <button id="lang-en"
                 onclick="setLanguage('en')" class="px-4 py-2 text-sm font-bold rounded-full transition-all">EN</button>
-            </div><a href="#contact" class="btn-vending text-white text-sm" data-i18n="nav_cta">Book a Machine 🎉</a>
+            </div><a href="#contact" class="btn-vending text-white text-sm" data-i18n="nav_cta"></a>
           </div>
           
           <!-- Mobile Menu Button --> 
@@ -68,22 +61,12 @@
               src="https://api.iconify.design/mdi/close.svg?color=%23FF6B35&amp;width=32&amp;height=32" alt="Close"
               class="w-8 h-8" onerror="this.style.display='none'"> </button>
           <div class="mt-16 space-y-4">
-            <a href="#home" onclick="toggleMobileMenu();"
-              class="block py-3 text-lg font-bold border-b-2 border-orange-100 hover:text-orange-500"
-              data-i18n="nav_home">Home</a>
-              <a href="#about" onclick="toggleMobileMenu()" class="block py-3 text-lg font-bold border-b-2 border-orange-100 hover:text-orange-500" data-i18n="nav_about">About</a>
-              <a href="#services" onclick="toggleMobileMenu()" class="block py-3 text-lg font-bold border-b-2 border-orange-100 hover:text-orange-500" data-i18n="nav_services">Services</a>
-              <!-- <a href="#how-it-works" onclick="toggleMobileMenu()" class="block py-3 text-lg font-bold border-b-2 border-orange-100 hover:text-orange-500" data-i18n="nav_how_it_works">How It Works</a>  -->
-              <!-- <a href="#early-program" onclick="toggleMobileMenu()" class="block py-3 text-lg font-bold border-b-2 border-orange-100 hover:text-orange-500" data-i18n="nav_early_program">Early Program</a> -->
-              <a href="#gallery" onclick="toggleMobileMenu()" class="block py-3 text-lg font-bold border-b-2 border-orange-100 hover:text-orange-500" data-i18n="nav_gallery">Gallery</a>
-              <a href="#locations" onclick="toggleMobileMenu()" class="block py-3 text-lg font-bold border-b-2 border-orange-100 hover:text-orange-500" data-i18n="nav_locations">Locations</a>
-              <a href="#partners" onclick="toggleMobileMenu()" class="block py-3 text-lg font-bold border-b-2 border-orange-100 hover:text-orange-500" data-i18n="nav_partners">Partners</a>
             <div class="flex items-center space-x-2 py-4"><button id="mobile-lang-id" onclick="setLanguage('id')"
                 class="px-4 py-2 text-sm font-bold rounded-full border-2 border-orange-200">ID</button> <button
                 id="mobile-lang-en" onclick="setLanguage('en')"
                 class="px-4 py-2 text-sm font-bold rounded-full border-2 border-orange-200">EN</button>
             </div><a href="#contact" onclick="toggleMobileMenu()"
-              class="btn-vending block text-center text-white text-sm mt-4" data-i18n="nav_cta">Book a Machine 🎉</a>
+              class="btn-vending block text-center text-white text-sm mt-4" data-i18n="nav_cta"></a>
           </div>
         </div>
       </div>
@@ -99,17 +82,16 @@
               <div class="vending-badge pulse-badge mb-6"><img
                   src="https://api.iconify.design/mdi/lightning-bolt.svg?color=white&amp;width=24&amp;height=24"
                   alt="Lightning" class="w-6 h-6" onerror="this.style.display='none'"> <span
-                  data-i18n="hero_badge" id="badge-headline">Smart Vending Solutions</span>
+                  data-i18n="hero_badge" id="badge-headline"></span>
               </div>
               <h1 id="hero-headline"
                 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6 text-gray-800"
-                data-i18n="hero_headline">Snack Happy, Vend Smart! 🍫</h1>
+                data-i18n="hero_headline"></h1>
               <p id="hero-subheadline" class="font-text text-lg sm:text-xl leading-relaxed mb-5 text-gray-600"
-                data-i18n="hero_subheadline">Your 24/7 partner for delicious snacks and drinks! We bring the ultimate
-                vending experience with cashless payments, strategic locations, and the tastiest treats.</p>
+                data-i18n="hero_subheadline"></p>
               <div class="flex flex-col sm:flex-row gap-4">
                 <a style="width: 100%;" href="#contact" class="btn-vending text-center"
-                  data-i18n="cta_book"> 🎉</a> 
+                  data-i18n="cta_book"></a> 
               </div>
               
               <!-- Stats -->
@@ -143,7 +125,7 @@
             <!-- Hero Image -->
             <div class="relative">
               <div class="relative rounded-3xl overflow-hidden vending-shadow-lg border-4 border-white">
-                <img src="./images/samakan-2.png" alt="Modern Vending Machine" style="padding: 1.5rem" class="w-full h-auto" onerror="this.src='https://placehold.co/800x1000/FF6B35/FFFFFF?text=Vending+Machine&amp;font=fredoka'; this.alt='Vending Machine';">
+                <img alt="Modern Vending Machine" style="padding: 1.5rem" class="w-full h-auto">
               </div>
 
               <!-- Floating Badge -->
@@ -173,84 +155,15 @@
       <!-- About Section -->
       <section id="about" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-center mb-16"><span class="vending-badge mb-6" data-i18n="about_label" id="about-badge">About 🎯</span>
+          <div class="text-center mb-16"><span class="vending-badge mb-6" data-i18n="about_label" id="about-badge"></span>
             <h2 id="about-title" class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mt-6 mb-6 text-gray-800"
-              data-i18n="about_title">Vending Made Yummy! 🍭</h2>
+              data-i18n="about_title"></h2>
             <p class="font-text text-lg leading-relaxed max-w-5xl mx-auto text-gray-600" id="about-description" data-i18n="about_desc1"></p>
           </div><!-- Vision & Mission Cards -->
-          <div class="grid md:grid-cols-2 gap-8 mb-16">
-            <div class="vision-mission-card">
-              <div class="flex items-start gap-4 mb-6"><img
-                  src="https://api.iconify.design/mdi/eye-outline.svg?color=white&amp;width=48&amp;height=48"
-                  alt="Vision" class="w-12 h-12 flex-shrink-0" onerror="this.style.display='none'">
-                <div>
-                  <h3 data-i18n="vision_title">Our Vision 👁️</h3>
-                  <p data-i18n="vision_desc">To become Indonesia's #1 vending machine partner, making snacks and drinks
-                    accessible anytime, anywhere through innovative technology!</p>
-                </div>
-              </div>
-            </div>
-            <div class="vision-mission-card"
-              style="background: linear-gradient(135deg, var(--color-secondary) 0%, #FFA726 100%);">
-              <div class="flex items-start gap-4 mb-6"><img
-                  src="https://api.iconify.design/mdi/target.svg?color=white&amp;width=48&amp;height=48" alt="Mission"
-                  class="w-12 h-12 flex-shrink-0" onerror="this.style.display='none'">
-                <div>
-                  <h3 data-i18n="mission_title">Our Mission 🎯</h3>
-                  <p data-i18n="mission_desc">To deliver end-to-end vending solutions with awesome service, real-time
-                    data, and maximum ROI for our brand partners!</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="grid md:grid-cols-2 gap-8 mb-16"></div>
           
           <!-- Features Grid -->
-          <div class="snack-grid">
-            <div class="snack-card p-8">
-              <div
-                class="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center mb-6">
-                <img src="https://api.iconify.design/mdi/map-marker-radius.svg?color=white&amp;width=32&amp;height=32"
-                  alt="Location" class="w-8 h-8" onerror="this.style.display='none'">
-              </div>
-              <h3 class="font-display text-xl font-bold mb-3 text-gray-800" data-i18n="about_feat1_title">Prime
-                Locations 📍</h3>
-              <p class="text-gray-600" data-i18n="about_feat1_desc">Strategic spots with high foot traffic for maximum
-                snack action!</p>
-            </div>
-            <div class="snack-card p-8">
-              <div
-                class="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center mb-6">
-                <img src="https://api.iconify.design/mdi/cog-sync.svg?color=white&amp;width=32&amp;height=32"
-                  alt="Operations" class="w-8 h-8" onerror="this.style.display='none'">
-              </div>
-              <h3 class="font-display text-xl font-bold mb-3 text-gray-800" data-i18n="about_feat2_title">Full Service
-                ⚙️</h3>
-              <p class="text-gray-600" data-i18n="about_feat2_desc">We handle everything: logistics, refills, and 24/7
-                monitoring!</p>
-            </div>
-            <div class="snack-card p-8">
-              <div
-                class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center mb-6">
-                <img src="https://api.iconify.design/mdi/chart-line.svg?color=white&amp;width=32&amp;height=32"
-                  alt="Analytics" class="w-8 h-8" onerror="this.style.display='none'">
-              </div>
-              <h3 class="font-display text-xl font-bold mb-3 text-gray-800" data-i18n="about_feat3_title">Real-Time Data
-                📊</h3>
-              <p class="text-gray-600" data-i18n="about_feat3_desc">Live sales reports and inventory tracking at your
-                fingertips!</p>
-            </div>
-            <div class="snack-card p-8">
-              <div
-                class="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-400 to-teal-500 flex items-center justify-center mb-6">
-                <img src="https://api.iconify.design/mdi/gift-outline.svg?color=white&amp;width=32&amp;height=32"
-                  alt="Activation" class="w-8 h-8" onerror="this.style.display='none'">
-              </div>
-              <h3 class="font-display text-xl font-bold mb-3 text-gray-800" data-i18n="about_feat4_title">Brand
-                Activation 🎁</h3>
-              <p class="text-gray-600" data-i18n="about_feat4_desc">Product sampling, launches, and epic marketing
-                campaigns!</p>
-            </div>
-          </div>
+          <div class="snack-grid"></div>
         </div>
       </section>
       
@@ -262,19 +175,7 @@
             <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mt-6 mb-6 text-gray-800" id="services-title"></h2>
             <p class="text-lg leading-relaxed max-w-3xl mx-auto text-gray-600" id="services-description"></p>
           </div>
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Service Card 1 -->
-            <div class="snack-card p-8 text-center">
-              <div
-                class="w-24 h-24 rounded-3xl bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center mx-auto mb-6 icon-bounce">
-                <img src="" alt="" class="w-12 h-12" onerror="this.style.display='none'">
-              </div>
-              <h3 class="font-display text-2xl font-bold mb-4 text-gray-800">24/7
-                Availability ⏰</h3>
-              <p class="text-gray-600">Never close! Serve customers day and night without
-                staff!</p>
-            </div>
-          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
         </div>
       </section>
 
@@ -289,18 +190,7 @@
               id="how-it-works-subtitle"></p>
           </div>
 
-          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Step 1 -->
-            <div class="snack-card p-8 text-center">
-              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center mx-auto mb-6">
-                <span class="font-display text-white font-bold text-2xl">1</span>
-              </div>
-              <h3 class="font-display text-xl font-bold mb-3 text-gray-800" data-i18n="how_step1_title">Menu Selection</h3>
-              <p class="text-gray-600" data-i18n="how_step1_desc">
-                You select menu items suitable for storage and reheating.
-              </p>
-            </div>
-          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
         </div>
       </section>
 
@@ -313,17 +203,7 @@
             <p class="text-lg leading-relaxed max-w-3xl mx-auto text-gray-600" id="gallery-description"></p>
           </div>
 
-          <div id="lightgallery" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            <a
-              href="https://images.unsplash.com/photo-1601599561213-832382fd07ba?w=1200&amp;h=1600&amp;fit=crop"
-              class="gallery-item aspect-square"
-              data-lightbox="vending-gallery"
-              data-title="Modern Vending Machine"
-            >
-              <img src="https://images.unsplash.com/photo-1601599561213-832382fd07ba?w=400&amp;h=400&amp;fit=crop" alt="Modern Vending Machine"
-                onerror="this.src='https://placehold.co/400x400/FF6B35/FFFFFF?text=Vending+1&amp;font=fredoka'; this.alt='Vending 1';">
-            </a>
-          </div>
+          <div id="lightgallery" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
         </div>
       </section>
 
@@ -334,18 +214,9 @@
             <span class="vending-badge mb-6" id="locations-badge"></span>
             <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mt-6 mb-6 text-gray-800"
               id="locations-title"></h2>
-            <p class="text-lg leading-relaxed max-w-3xl mx-auto text-gray-600" data-id="locations-desc"></p>
+            <p class="text-lg leading-relaxed max-w-3xl mx-auto text-gray-600" id="locations-desc"></p>
           </div>
-          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            <div class="snack-card p-6 text-center">
-              <div
-                class="w-16 h-16 rounded-2xl bg-gradient-to-br from-red-400 to-pink-500 flex items-center justify-center mx-auto mb-4">
-                <img src="https://api.iconify.design/mdi/hospital-building.svg?color=white&amp;width=32&amp;height=32"
-                  alt="Hospital" class="w-8 h-8" onerror="this.style.display='none'">
-              </div>
-              <h4 class="font-display font-bold text-gray-800" data-i18n="loc_hospitals">Hospitals 🏥</h4>
-            </div>
-          </div>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6"></div>
         </div>
       </section>
 
@@ -358,56 +229,18 @@
               alt="Partners" class="w-16 h-16" onerror="this.style.display='none'">
           </div>
 
-          <span class="vending-badge mb-6" data-i18n="trusted_by">Trusted by Partners 🤝</span>
+          <span class="vending-badge mb-6" data-i18n="trusted_by"></span>
 
           <h1 class="font-display text-4xl sm:text-5xl font-bold mb-6 mt-6 text-gray-800"
-            data-i18n="partners_page_title">Our Amazing Partners!</h1>
+            data-i18n="partners_page_title"></h1>
 
-          <p class="text-xl leading-relaxed mb-10 text-gray-600" data-i18n="partners_page_desc">
-            We collaborate with awesome brands to bring great snacks everywhere. Here are a few partners who trust SAMAKAN.
-          </p>
+          <p class="text-xl leading-relaxed mb-10 text-gray-600" data-i18n="partners_page_desc"></p>
 
           <!-- Partner Logos -->
-          <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 mb-10">
-            <div class="p-5 rounded-2xl border border-orange-100 bg-orange-50/40 hover:bg-orange-50 transition">
-              <img src="./images/logo.png" alt="Partner 1"
-                class="h-10 mx-auto object-contain mb-3" onerror="this.style.display='none'">
-              <p class="text-sm font-semibold text-gray-700">FreshBite</p>
-            </div>
-
-            <div class="p-5 rounded-2xl border border-orange-100 bg-orange-50/40 hover:bg-orange-50 transition">
-              <img src="./images/logo.png" alt="Partner 2"
-                class="h-10 mx-auto object-contain mb-3" onerror="this.style.display='none'">
-              <p class="text-sm font-semibold text-gray-700">Urban Eats</p>
-            </div>
-
-            <div class="p-5 rounded-2xl border border-orange-100 bg-orange-50/40 hover:bg-orange-50 transition">
-              <img src="./images/logo.png" alt="Partner 3"
-                class="h-10 mx-auto object-contain mb-3" onerror="this.style.display='none'">
-              <p class="text-sm font-semibold text-gray-700">Snack Lab</p>
-            </div>
-
-            <div class="p-5 rounded-2xl border border-orange-100 bg-orange-50/40 hover:bg-orange-50 transition">
-              <img src="./images/logo.png" alt="Partner 4"
-                class="h-10 mx-auto object-contain mb-3" onerror="this.style.display='none'">
-              <p class="text-sm font-semibold text-gray-700">FitFuel</p>
-            </div>
-
-            <div class="p-5 rounded-2xl border border-orange-100 bg-orange-50/40 hover:bg-orange-50 transition">
-              <img src="./images/logo.png" alt="Partner 5"
-                class="h-10 mx-auto object-contain mb-3" onerror="this.style.display='none'">
-              <p class="text-sm font-semibold text-gray-700">Campus Kitchen</p>
-            </div>
-
-            <div class="p-5 rounded-2xl border border-orange-100 bg-orange-50/40 hover:bg-orange-50 transition">
-              <img src="./images/logo.png" alt="Partner 6"
-                class="h-10 mx-auto object-contain mb-3" onerror="this.style.display='none'">
-              <p class="text-sm font-semibold text-gray-700">Daily Brew</p>
-            </div>
-          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 mb-10"></div>
 
           <a href="#contacthome" class="btn-vending inline-flex items-center justify-center gap-2">
-            <span data-i18n="become_partner">Become a Partner! 🤝</span>
+            <span data-i18n="become_partner"></span>
           </a>
         </div>
       </section>
@@ -417,15 +250,9 @@
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div class="text-center mb-14">
-          <span class="vending-badge mb-6">Early Partner Program 🚀</span>
-          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mt-6 mb-5 text-gray-800">
-            Early Partner Program
-          </h2>
-
-          <!-- ✅ UPDATED (ID version default) -->
-          <p class="text-lg leading-relaxed max-w-3xl mx-auto text-gray-600">
-            Kami membuka kesempatan bagi restoran terpilih untuk bergabung lebih awal.
-          </p>
+          <span class="vending-badge mb-6"></span>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mt-6 mb-5 text-gray-800"></h2>
+          <p class="text-lg leading-relaxed max-w-3xl mx-auto text-gray-600"></p>
         </div>
 
         <div class="grid lg:grid-cols-2 gap-10 items-start">
@@ -439,18 +266,14 @@
                     alt="star" class="w-7 h-7" onerror="this.style.display='none'">
                 </div>
                 <div>
-                  <div class="font-display font-bold text-gray-800 text-lg">
-                    Get in early — win premium placement.
-                  </div>
-                  <div class="text-gray-600 mt-1">
-                    Early partners receive priority location access and stronger commercial terms.
-                  </div>
+                  <div class="font-display font-bold text-gray-800 text-lg"></div>
+                  <div class="text-gray-600 mt-1"></div>
                 </div>
               </div>
             </div>
 
             <!-- ✅ UPDATED (ID version default) -->
-            <h3 class="font-display text-2xl font-bold mb-4 text-gray-800">Keuntungan:</h3>
+            <h3 class="font-display text-2xl font-bold mb-4 text-gray-800"></h3>
 
             <ul class="space-y-4 text-gray-700">
               <li class="flex items-start gap-3">
@@ -459,9 +282,8 @@
                     alt="placement" class="w-5 h-5" onerror="this.style.display='none'">
                 </div>
                 <div>
-                  <!-- ✅ UPDATED -->
-                  <div class="font-bold text-gray-800">Prioritas penempatan mesin</div>
-                  <div class="text-gray-600">Get first access to high-traffic locations.</div>
+                  <div class="font-bold text-gray-800"></div>
+                  <div class="text-gray-600"></div>
                 </div>
               </li>
 
@@ -471,9 +293,8 @@
                     alt="terms" class="w-5 h-5" onerror="this.style.display='none'">
                 </div>
                 <div>
-                  <!-- ✅ UPDATED -->
-                  <div class="font-bold text-gray-800">Skema bagi hasil khusus</div>
-                  <div class="text-gray-600">Better split options for early movers.</div>
+                  <div class="font-bold text-gray-800"></div>
+                  <div class="text-gray-600"></div>
                 </div>
               </li>
 
@@ -483,9 +304,8 @@
                     alt="branding" class="w-5 h-5" onerror="this.style.display='none'">
                 </div>
                 <div>
-                  <!-- ✅ UPDATED -->
-                  <div class="font-bold text-gray-800">Eksposur co-branding</div>
-                  <div class="text-gray-600">Boost awareness through shared promotions.</div>
+                  <div class="font-bold text-gray-800"></div>
+                  <div class="text-gray-600"></div>
                 </div>
               </li>
 
@@ -495,16 +315,15 @@
                     alt="limited" class="w-5 h-5" onerror="this.style.display='none'">
                 </div>
                 <div>
-                  <!-- ✅ UPDATED -->
-                  <div class="font-bold text-gray-800">Slot terbatas.</div>
-                  <div class="text-gray-600">We onboard only a small batch of partners.</div>
+                  <div class="font-bold text-gray-800"></div>
+                  <div class="text-gray-600"></div>
                 </div>
               </li>
             </ul>
 
             <div class="mt-8 flex flex-col sm:flex-row gap-4">
               <!-- <a href="#contact" class="btn-vending text-sm text-center">Apply Now 🎉</a> -->
-              <a href="#contact" class="btn-secondary text-sm text-center">Talk to Us 💬</a>
+              <a href="#contact" class="btn-secondary text-sm text-center"></a>
             </div>
           </div>
 
@@ -515,49 +334,38 @@
               <div class="relative">
                 <div class="absolute -top-20 -right-20 w-36 h-36 rounded-full bg-gradient-to-br from-orange-300/40 to-red-400/40"></div>
                 <div class="flex items-center justify-between gap-4 mb-6">
-                  <div class="font-display font-bold text-xl text-gray-800">
-                    Gelombang Awal (Early Batch Intake)
-                  </div>
-                  <span class="px-4 py-2 rounded-full text-sm font-bold border-2 border-orange-200 bg-white">
-                    Slot Terbatas
-                  </span>
+                  <div class="font-display font-bold text-xl text-gray-800"></div>
+                  <span class="px-4 py-2 rounded-full text-sm font-bold border-2 border-orange-200 bg-white"></span>
                 </div>
 
-                <p class="text-gray-600 leading-relaxed mb-6">
-                  We’re selecting restaurants with strong menu quality and operational consistency.
-                  If you’re ready to scale beyond your physical location — this is your window.
-                </p>
+                <p class="text-gray-600 leading-relaxed mb-6"></p>
 
                 <div class="grid grid-cols-2 gap-4 mb-8">
                   <div class="p-5 rounded-2xl border border-orange-100 bg-orange-50/50">
-                    <div class="text-sm text-gray-600">Focus</div>
-                    <div class="font-display font-bold text-gray-800 text-lg">Quality</div>
+                    <div class="text-sm text-gray-600"></div>
+                    <div class="font-display font-bold text-gray-800 text-lg"></div>
                   </div>
                   <div class="p-5 rounded-2xl border border-orange-100 bg-orange-50/50">
-                    <div class="text-sm text-gray-600">Speed</div>
-                    <div class="font-display font-bold text-gray-800 text-lg">Fast Onboarding</div>
+                    <div class="text-sm text-gray-600"></div>
+                    <div class="font-display font-bold text-gray-800 text-lg"></div>
                   </div>
                   <div class="p-5 rounded-2xl border border-orange-100 bg-orange-50/50">
-                    <div class="text-sm text-gray-600">Locations</div>
-                    <div class="font-display font-bold text-gray-800 text-lg">High-Traffic</div>
+                    <div class="text-sm text-gray-600"></div>
+                    <div class="font-display font-bold text-gray-800 text-lg"></div>
                   </div>
                   <div class="p-5 rounded-2xl border border-orange-100 bg-orange-50/50">
-                    <div class="text-sm text-gray-600">Support</div>
-                    <div class="font-display font-bold text-gray-800 text-lg">End-to-End</div>
+                    <div class="text-sm text-gray-600"></div>
+                    <div class="font-display font-bold text-gray-800 text-lg"></div>
                   </div>
                 </div>
 
                 <div class="rounded-2xl border-2 border-orange-100 bg-white p-6">
-                  <div class="font-display font-bold text-gray-800 mb-2">
-                    Tip to get accepted
-                  </div>
-                  <div class="text-gray-600">
-                    Prepare 3–5 best-selling menu items suitable for reheating and stable packaging.
-                  </div>
+                  <div class="font-display font-bold text-gray-800 mb-2"></div>
+                  <div class="text-gray-600"></div>
                 </div>
 
                 <div class="mt-8 flex flex-col sm:flex-row gap-4">
-                  <a href="#contact" class="btn-vending text-sm text-center">Join Early Program</a>
+                  <a href="#contact" class="btn-vending text-sm text-center"></a>
                   <!-- <a id="early-wa-btn" href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer"
                     class="btn-secondary text-center flex items-center justify-center gap-2 text-sm">
                     <img src="https://api.iconify.design/mdi/whatsapp.svg?color=%23FF6B35&width=22&height=22"
@@ -594,21 +402,13 @@
         <div class="text-center mb-12">
           <span class="vending-badge mb-6"></span>
 
-          <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-800">
-            Let’s Serve Food Differently
-          </h2>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-800"></h2>
 
-          <p class="text-gray-600 mt-3">
-            Interested in turning your food into 24/7 sales?
-          </p>
+          <p class="text-gray-600 mt-3"></p>
 
           <div class="mt-8 text-left max-w-md mx-auto">
-            <p class="font-semibold text-gray-800 mb-3">Next Steps</p>
-            <ul class="list-disc pl-5 text-gray-600 space-y-1">
-              <li>Menu suitability discussion</li>
-              <li>Location matching</li>
-              <li>Pilot program setup</li>
-            </ul>
+            <p class="font-semibold text-gray-800 mb-3"></p>
+            <ul class="list-disc pl-5 text-gray-600 space-y-1"></ul>
           </div>
         </div>
 
@@ -636,9 +436,7 @@
             </div>
           </div>
 
-          <button type="button" class="btn-vending w-full mt-6">
-            Send 🎉
-          </button>
+          <button type="button" class="btn-vending w-full mt-6"></button>
         </form>
 
       </div>
@@ -676,42 +474,29 @@
                   class="text-xs block -mt-1 font-bold text-amber-400">By Kyojin</span>
               </div>
             </div>
-            <p class="text-gray-400 leading-relaxed max-w-md" data-i18n="footer_desc">Your friendly vending partner
-              bringing snacks and happiness to Indonesia, one machine at a time! 🍫✨</p>
+            <p class="text-gray-400 leading-relaxed max-w-md" data-i18n="footer_desc"></p>
           </div>
           <div>
             <h4 class="font-display font-bold text-lg mb-4" data-i18n="footer_nav">Quick Links</h4>
-            <ul class="space-y-3">
-              <li><a href="#about" class="text-gray-400 hover:text-orange-400 transition-colors"
-                  data-i18n="nav_about">About</a></li>
-              <li><a href="#services" class="text-gray-400 hover:text-orange-400 transition-colors"
-                  data-i18n="nav_services">Services</a></li>
-              <li><a href="#gallery" class="text-gray-400 hover:text-orange-400 transition-colors"
-                  data-i18n="nav_gallery">Gallery</a></li>
-              <li><a href="#contact" class="text-gray-400 hover:text-orange-400 transition-colors"
-                  data-i18n="nav_contact">Contact</a></li>
-            </ul>
+            <ul class="space-y-3"></ul>
           </div>
           <div>
             <h4 class="font-display font-bold text-lg mb-4" data-i18n="footer_contact">Contact Us</h4>
             <ul class="space-y-3 text-gray-400">
               <li class="flex items-center gap-2"><img
                   src="https://api.iconify.design/mdi/email.svg?color=%23FF6B35&amp;width=20&amp;height=20"
-                  alt="Email" class="w-5 h-5" onerror="this.style.display='none'"> <span>hello@samakan.id</span></li>
+                  alt="Email" class="w-5 h-5" onerror="this.style.display='none'"> <span></span></li>
               <li class="flex items-center gap-2"><img
                   src="https://api.iconify.design/mdi/phone.svg?color=%23FF6B35&amp;width=20&amp;height=20"
-                  alt="Phone" class="w-5 h-5" onerror="this.style.display='none'"> <span id="footer-phone">+62 812
-                  3456 7890</span></li>
+                  alt="Phone" class="w-5 h-5" onerror="this.style.display='none'"> <span id="footer-phone"></span></li>
               <li class="flex items-center gap-2"><img
                   src="https://api.iconify.design/mdi/map-marker.svg?color=%23FF6B35&amp;width=20&amp;height=20"
-                  alt="Location" class="w-5 h-5" onerror="this.style.display='none'"> <span>Jakarta, Indonesia
-                  🇮🇩</span></li>
+                  alt="Location" class="w-5 h-5" onerror="this.style.display='none'"> <span></span></li>
             </ul>
           </div>
         </div>
         <div class="border-t border-gray-800 pt-8 text-center">
-          <p class="text-gray-500 text-sm">© 2024 Samakan By Kyojin. <span data-i18n="footer_rights">Made with ❤️ and
-              lots of snacks!</span></p>
+          <p class="text-gray-500 text-sm"></p>
         </div>
       </div>
     </footer>

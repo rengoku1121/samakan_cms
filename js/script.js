@@ -51,32 +51,18 @@ function setLanguage(lang) {
     'transparent';
   document.getElementById('mobile-lang-en').style.color = lang === 'en' ? 'white' : 'var(--color-text)';
 
-  // Update all i18n elements
-  document.querySelectorAll('[data-i18n]').forEach(element => {
-    const key = element.getAttribute('data-i18n');
-    if (translations[lang][key]) {
-      element.innerHTML = translations[lang][key];
-    }
-  });
-
-  // Update config-dependent elements
-  const config = window.elementSdk ? window.elementSdk.config : defaultConfig;
-  if (lang === 'en') {
-    document.getElementById('hero-headline').innerHTML = config.hero_headline_en || defaultConfig
-      .hero_headline_en;
-    document.getElementById('hero-subheadline').innerHTML = config.hero_subheadline_en || defaultConfig
-      .hero_subheadline_en;
-    document.getElementById('about-title').innerHTML = config.about_title_en || defaultConfig.about_title_en;
-  } else {
-    document.getElementById('hero-headline').innerHTML = config.hero_headline_id || defaultConfig
-      .hero_headline_id;
-    document.getElementById('hero-subheadline').innerHTML = config.hero_subheadline_id || defaultConfig
-      .hero_subheadline_id;
-    document.getElementById('about-title').innerHTML = config.about_title_id || defaultConfig.about_title_id;
+  if (typeof translations !== "undefined" && translations[lang]) {
+    document.querySelectorAll("[data-i18n]").forEach((element) => {
+      const key = element.getAttribute("data-i18n");
+      if (translations[lang][key]) {
+        element.innerHTML = translations[lang][key];
+      }
+    });
   }
 
-  // Update WhatsApp links
-  updateWhatsAppLinks();
+  if (typeof updateWhatsAppLinks === "function") {
+    updateWhatsAppLinks();
+  }
 }
 
 function toggleMobileMenu() {
