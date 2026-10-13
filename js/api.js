@@ -9,6 +9,10 @@
 const API_URL = "https://cms.samakan.id/api/public/site";
 const ASSET_BASE = "https://cms.samakan.id";
 
+// v1 copy lives in the page. The old CMS still serves the previous snack-vending
+// model and must not overwrite the new sections until that CMS is rebuilt.
+const USE_CMS = false;
+
 let SITE = null;
 let LANG = "id";
 
@@ -16,6 +20,7 @@ let LANG = "id";
    1) LANGUAGE GUARD (FIX)
    ========================= */
 (function initLanguageGuard() {
+  if (!USE_CMS) return;
   const pending = { lang: null };
 
   window.setLanguage = function setLanguage(lang) {
@@ -763,6 +768,7 @@ function revealSite() {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
+  if (!USE_CMS) return;
   try {
     const res = await fetch(API_URL, { headers: { Accept: "application/json" } });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
