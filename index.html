@@ -76,7 +76,7 @@
       <div class="blob blob-a" aria-hidden="true"></div>
       <div class="blob blob-b" aria-hidden="true"></div>
       <div class="wrap hero-grid">
-        <div>
+        <div class="hero-copy">
           <p class="kicker">SAMAKAN by Kyojin</p>
           <h1 data-i18n="hero_title" data-i18n-html>Buka Bisnis, <span class="accent">Bukan Tambah Beban.</span></h1>
           <p class="lead" data-i18n="hero_sub">Mesin makanan panas 24 jam dengan software buatan Indonesia. Kami bantu dari pemilihan menu sampai operasional harian.</p>
@@ -136,7 +136,7 @@
         <div class="machine-shot about-shot">
           <img src="./images/machine-front-filled.jpeg" alt="Mesin SAMAKAN berisi makanan panas" width="900" height="900" loading="lazy">
         </div>
-        <div>
+        <div class="about-copy">
           <div class="draw-stripe" aria-hidden="true"></div>
           <div class="section-head">
             <p class="kicker" data-i18n="nav_about">Tentang</p>
@@ -172,7 +172,7 @@
 
     <section id="cara-kerja" class="section">
       <div class="wrap split">
-        <div>
+        <div class="how-copy">
           <div class="draw-stripe" aria-hidden="true"></div>
           <div class="section-head">
             <p class="kicker" data-i18n="how_kicker">Cara Kerja</p>
@@ -314,14 +314,7 @@
             <p class="muted" data-i18n="pkg_cruise">Kelola penuh oleh SAMAKAN: lokasi, menu, restock, kebersihan, perawatan. Anda menerima bagi hasil penjualan bulanan.</p>
           </article>
         </div>
-        <div class="flow" aria-label="Tahapan">
-          <span data-i18n="own_step1">Konsultasi</span>
-          <span data-i18n="own_step2">Booking</span>
-          <span data-i18n="own_step3">Produksi &amp; pengiriman (±3–4 bulan)</span>
-          <span data-i18n="own_step4">Instalasi</span>
-          <span data-i18n="own_step5">Beroperasi</span>
-        </div>
-        <div class="cta-row">
+        <div class="cta-row" style="margin-top:22px">
           <a class="btn btn-orange" data-lead="form" href="https://wa.me/6281398068226?text=Halo%20SAMAKAN%2C%20saya%20ingin%20tahu%20lebih%20lanjut" data-i18n="own_cta1">Minta Penawaran</a>
           <a class="btn btn-ghost" data-lead="form" href="https://wa.me/6281398068226?text=Halo%20SAMAKAN%2C%20saya%20ingin%20tahu%20lebih%20lanjut" data-i18n="own_cta2">Minta Simulasi</a>
         </div>
@@ -331,11 +324,12 @@
 
     <section id="mitra-menu" class="section" style="background:#fff">
       <div class="wrap split">
-        <div>
+        <div class="menu-copy">
           <div class="draw-stripe" aria-hidden="true"></div>
           <p class="kicker" data-i18n="nav_menu">Mitra Menu</p>
           <h2 data-i18n="menu_title">Outlet Baru Tanpa Sewa Ruko.</h2>
           <p class="subhead" data-i18n="menu_sub">Jual menu Anda di jaringan mesin SAMAKAN – tanpa sewa, tanpa kasir, tanpa tambah karyawan.</p>
+          <div class="menu-rest">
           <ul class="checks">
             <li data-i18n="menu_b1">Jangkauan 24 jam</li>
             <li data-i18n="menu_b2">Tanpa biaya sewa</li>
@@ -351,6 +345,7 @@
           <p class="subhead" style="margin-top:16px" data-i18n="menu_scheme">Skema: konsinyasi atau harga reseller; tidak ada biaya sewa.</p>
           <div class="cta-row" style="margin-top:18px">
             <a class="btn btn-orange" data-lead="form" href="https://wa.me/6281398068226?text=Halo%20SAMAKAN%2C%20saya%20ingin%20tahu%20lebih%20lanjut" data-i18n="menu_cta">Daftar Jadi Mitra Menu</a>
+          </div>
           </div>
         </div>
         <div class="machine-shot">
@@ -379,13 +374,9 @@
           <article class="loc"><h3 data-i18n="loc_c">Kampus</h3></article>
           <article class="loc"><h3 data-i18n="loc_a">Apartemen</h3></article>
         </div>
-        <div class="flow">
-          <span data-i18n="loc_s1">Survei gratis</span>
-          <span data-i18n="loc_s2">Kesepakatan</span>
-          <span data-i18n="loc_s3">Instalasi</span>
-          <span data-i18n="loc_s4">Beroperasi</span>
+        <div class="cta-row" style="margin-top:22px">
+          <a class="btn btn-orange" data-lead="wa" href="https://wa.me/6281398068226?text=Halo%20SAMAKAN%2C%20saya%20ingin%20tahu%20lebih%20lanjut" data-i18n="loc_cta">Jadwalkan Survei Gratis</a>
         </div>
-        <a class="btn btn-orange" data-lead="wa" href="https://wa.me/6281398068226?text=Halo%20SAMAKAN%2C%20saya%20ingin%20tahu%20lebih%20lanjut" data-i18n="loc_cta">Jadwalkan Survei Gratis</a>
       </div>
     </section>
 
@@ -450,7 +441,7 @@
             </ul>
             <p class="contact-co">PT. Dharma Abadi Kyojin</p>
           </article>
-          <article class="contact-card form-card">
+          <article class="contact-card form-card" hidden>
             <h3 data-i18n="form_title">Formulir website</h3>
             <p class="muted" data-i18n="form_desc">Isi formulir singkat. Tim kami menghubungi Anda via WhatsApp.</p>
             <ul class="form-roles">
