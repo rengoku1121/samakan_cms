@@ -244,6 +244,7 @@ const translations = {
 
 let currentLang = "id";
 let footerPlace = { id: "Jakarta, Indonesia", en: "Jakarta, Indonesia" };
+let selectedPackage = "";
 
 function formatPhone(raw) {
   const digits = String(raw || "").replace(/\D/g, "");
@@ -279,6 +280,7 @@ function setLanguage(lang) {
   });
 
   applyFooterPlace();
+  applyPackageLinks();
 }
 
 function applyLeadLinks() {
@@ -292,6 +294,150 @@ function applyLeadLinks() {
     a.target = "_blank";
     a.rel = "noopener";
   });
+}
+
+function applyPackageLinks() {
+  const note = selectedPackage
+    ? (currentLang === "en" ? " Package: " + selectedPackage : " Paket: " + selectedPackage)
+    : "";
+  document.querySelectorAll("#pemilik [data-lead='form']").forEach((link) => {
+    link.href = FORM_URL || !note ? (FORM_URL || WA_URL) : WA_URL + encodeURIComponent(note);
+  });
+}
+
+function activateControl(el, handler) {
+  el.addEventListener("click", handler);
+  el.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    event.preventDefault();
+    handler();
+  });
+}
+
+function setupPackages() {
+  document.querySelectorAll("#pemilik .package").forEach((card) => {
+    activateControl(card, () => {
+      selectedPackage = card.dataset.package || "";
+      document.querySelectorAll("#pemilik .package").forEach((item) => {
+        const on = item === card;
+        item.classList.toggle("is-selected", on);
+        item.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+      applyPackageLinks();
+    });
+  });
+}
+
+function setupSteps() {
+  const steps = [...document.querySelectorAll("#cara-kerja .step")];
+  const section = document.getElementById("cara-kerja");
+  if (!steps.length || !section) return;
+  let timer = 0;
+  let played = false;
+  function setOn(index) {
+    steps.forEach((step, i) => {
+      const on = i === index;
+      step.classList.toggle("is-on", on);
+      step.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+  }
+  steps.forEach((step, i) => {
+    step.addEventListener("click", () => {
+      window.clearInterval(timer);
+      played = true;
+      setOn(i);
+    });
+  });
+  if (!("IntersectionObserver" in window)) return;
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const observer = new IntersectionObserver((entries) => {
+    if (!entries.some((entry) => entry.isIntersecting) || played) return;
+    played = true;
+    observer.disconnect();
+    if (reduce) {
+      setOn(0);
+      return;
+    }
+    let index = 0;
+    setOn(0);
+    timer = window.setInterval(() => {
+      index += 1;
+      if (index >= steps.length) {
+        window.clearInterval(timer);
+        return;
+      }
+      setOn(index);
+    }, 700);
+  }, { threshold: 0.45 });
+  observer.observe(section);
+}
+
+function setupSpecs() {
+  const nodes = [...document.querySelectorAll("#mesin [data-spec]")];
+  function select(id) {
+    nodes.forEach((el) => {
+      const on = el.dataset.spec === id;
+      el.classList.toggle("is-on", on);
+      if (el.getAttribute("role") === "button") el.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+  }
+  nodes.forEach((el) => {
+    const run = () => select(el.dataset.spec);
+    if (el.tagName === "BUTTON") el.addEventListener("click", run);
+    else activateControl(el, run);
+  });
+}
+
+function watchReveal() {
+  const nodes = [...document.querySelectorAll(".reveal")];
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!nodes.length || reduce || !("IntersectionObserver" in window)) return;
+  nodes.forEach((el) => el.classList.add("will-reveal"));
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("in");
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.2, rootMargin: "0px 0px -6% 0px" });
+  nodes.forEach((el) => observer.observe(el));
+}
+
+function watchNav() {
+  const ids = ["home", "tentang", "mesin", "pemilik", "mitra-menu", "lokasi", "kontak"];
+  const sections = ids.map((id) => document.getElementById(id)).filter(Boolean);
+  const links = [...document.querySelectorAll(".nav-links a[href^='#'], .mobile-menu a[href^='#']")]
+    .filter((link) => !link.hidden && !link.classList.contains("btn"));
+  if (!sections.length) return;
+  const paint = () => {
+    const line = 90;
+    let active = sections[0].id;
+    sections.forEach((section) => {
+      if (section.getBoundingClientRect().top <= line) active = section.id;
+    });
+    links.forEach((link) => {
+      const on = link.getAttribute("href") === "#" + active;
+      link.classList.toggle("is-current", on);
+      if (on) link.setAttribute("aria-current", "true");
+      else link.removeAttribute("aria-current");
+    });
+  };
+  paint();
+  document.addEventListener("scroll", paint, { passive: true });
+  window.addEventListener("resize", paint);
+}
+
+function watchScrollProgress() {
+  const bar = document.querySelector("body > .brand-stripe");
+  if (!bar) return;
+  const update = () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+    bar.style.backgroundPosition = (progress * 100) + "% 0";
+  };
+  update();
+  document.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", update);
 }
 
 function toggleMobileMenu(force) {
@@ -359,6 +505,12 @@ document.addEventListener("DOMContentLoaded", () => {
   applyLeadLinks();
   setLanguage("id");
   watchEffects();
+  watchReveal();
+  watchNav();
+  watchScrollProgress();
+  setupSteps();
+  setupPackages();
+  setupSpecs();
   loadFooter();
 
   const menuBtn = document.getElementById("menu-btn");

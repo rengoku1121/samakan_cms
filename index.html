@@ -178,11 +178,11 @@
             <p class="kicker" data-i18n="how_kicker">Cara Kerja</p>
             <h2 data-i18n="how_title">Dari layar sentuh sampai siap disantap.</h2>
           </div>
-          <div class="steps four">
-            <article class="step"><b>1</b><p data-i18n="how1">Pilih menu di layar sentuh</p></article>
-            <article class="step"><b>2</b><p data-i18n="how2">Bayar dengan QRIS</p></article>
-            <article class="step"><b>3</b><p data-i18n="how3">Mesin memanaskan otomatis</p></article>
-            <article class="step"><b>4</b><p data-i18n="how4">Ambil dan nikmati</p></article>
+          <div class="steps four" role="group" aria-label="Cara kerja">
+            <button type="button" class="step reveal" aria-pressed="false"><b>1</b><span data-i18n="how1">Pilih menu di layar sentuh</span></button>
+            <button type="button" class="step reveal" aria-pressed="false"><b>2</b><span data-i18n="how2">Bayar dengan QRIS</span></button>
+            <button type="button" class="step reveal" aria-pressed="false"><b>3</b><span data-i18n="how3">Mesin memanaskan otomatis</span></button>
+            <button type="button" class="step reveal" aria-pressed="false"><b>4</b><span data-i18n="how4">Ambil dan nikmati</span></button>
           </div>
         </div>
         <div class="machine-shot">
@@ -198,7 +198,7 @@
           <h2 data-i18n="who_title">Siapa yang cocok</h2>
         </div>
         <div class="who-row">
-          <a class="who" href="#pemilik">
+          <a class="who reveal" href="#pemilik">
             <span class="who-ico teal" aria-hidden="true">
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M8 7h8M8 11h5M8 16h3"></path></svg>
             </span>
@@ -206,7 +206,7 @@
             <p class="muted" data-i18n="who1_desc">Miliki mesin SAMAKAN dan pilih seberapa banyak Anda ingin terlibat.</p>
             <span class="more" data-i18n="who_more">Lihat selengkapnya</span>
           </a>
-          <a class="who" href="#mitra-menu">
+          <a class="who reveal" href="#mitra-menu">
             <span class="who-ico orange" aria-hidden="true">
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 11h16a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6z"></path><path d="M8 11V8M12 11V6M16 11V8"></path></svg>
             </span>
@@ -214,7 +214,7 @@
             <p class="muted" data-i18n="who2_desc">Jual menu Anda di jaringan mesin, tanpa sewa dan tanpa kasir.</p>
             <span class="more" data-i18n="who_more">Lihat selengkapnya</span>
           </a>
-          <a class="who" href="#lokasi">
+          <a class="who reveal" href="#lokasi">
             <span class="who-ico yellow" aria-hidden="true">
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11z"></path><circle cx="12" cy="10" r="2.2"></circle></svg>
             </span>
@@ -243,24 +243,30 @@
         </div>
         <div class="mesin-body">
           <div class="machine-shot">
-            <img src="./images/machine-mesin.png" alt="Tampak depan mesin SAMAKAN" width="1077" height="1074" loading="lazy">
+            <div class="shot-frame">
+              <img src="./images/machine-mesin.png" alt="Tampak depan mesin SAMAKAN" width="1077" height="1074" loading="lazy">
+              <button type="button" class="hotspot" data-spec="cold" style="left:22%;top:30%" aria-labelledby="spec-cold"></button>
+              <button type="button" class="hotspot" data-spec="portions" style="left:22%;top:55%" aria-labelledby="spec-portions"></button>
+              <button type="button" class="hotspot" data-spec="screen" style="left:80%;top:16%" aria-labelledby="spec-screen"></button>
+              <button type="button" class="hotspot" data-spec="pay" style="left:80%;top:33%" aria-labelledby="spec-pay"></button>
+            </div>
           </div>
           <div class="mesin-side">
             <div class="spec-grid">
-              <article class="spec">
+              <article class="spec reveal" id="spec-cold" data-spec="cold" role="button" tabindex="0" aria-pressed="false">
                 <strong><span class="count" data-to="4">0</span>–8°C</strong>
                 <p data-i18n="spec_cold">Penyimpanan dingin dengan microwave otomatis</p>
                 <div class="temp-bar" data-temp><span></span></div>
               </article>
-              <article class="spec">
+              <article class="spec reveal" id="spec-portions" data-spec="portions" role="button" tabindex="0" aria-pressed="false">
                 <strong><span class="count" data-to="60">0</span>–100</strong>
                 <p data-i18n="spec_portions">porsi</p>
               </article>
-              <article class="spec">
+              <article class="spec reveal" id="spec-screen" data-spec="screen" role="button" tabindex="0" aria-pressed="false">
                 <strong><span class="count" data-to="21.5" data-suffix="&quot;">0</span></strong>
                 <p data-i18n="spec_screen">Layar sentuh</p>
               </article>
-              <article class="spec">
+              <article class="spec reveal" id="spec-pay" data-spec="pay" role="button" tabindex="0" aria-pressed="false">
                 <strong>QRIS</strong>
                 <p data-i18n="spec_pay">Pembayaran</p>
               </article>
@@ -301,15 +307,15 @@
           <li data-i18n="own_in4">Akses dashboard</li>
         </ul>
         <div class="package-grid" style="margin-top:22px">
-          <article class="package">
+          <article class="package reveal" data-package="Basic" role="button" tabindex="0" aria-pressed="false">
             <h3>Basic</h3>
             <p class="muted" data-i18n="pkg_basic">Anda menjalankan operasional; kami sediakan software, dashboard, dan dukungan teknis.</p>
           </article>
-          <article class="package">
+          <article class="package reveal" data-package="Plus" role="button" tabindex="0" aria-pressed="false">
             <h3>Plus</h3>
             <p class="muted" data-i18n="pkg_plus">Dukungan lebih lengkap untuk pemilik yang ingin tetap mengelola sendiri.</p>
           </article>
-          <article class="package cruise">
+          <article class="package cruise reveal" data-package="Cruise" role="button" tabindex="0" aria-pressed="false">
             <h3>Cruise</h3>
             <p class="muted" data-i18n="pkg_cruise">Kelola penuh oleh SAMAKAN: lokasi, menu, restock, kebersihan, perawatan. Anda menerima bagi hasil penjualan bulanan.</p>
           </article>
@@ -368,11 +374,26 @@
           <li data-i18n="loc_p4">Tanpa uang tunai – pembayaran QRIS</li>
         </ul>
         <div class="loc-grid" style="margin-top:22px">
-          <article class="loc"><h3 data-i18n="loc_h">Rumah sakit</h3></article>
-          <article class="loc"><h3 data-i18n="loc_o">Kantor</h3></article>
-          <article class="loc"><h3 data-i18n="loc_f">Pabrik dengan shift malam</h3></article>
-          <article class="loc"><h3 data-i18n="loc_c">Kampus</h3></article>
-          <article class="loc"><h3 data-i18n="loc_a">Apartemen</h3></article>
+          <article class="loc reveal">
+            <span class="loc-ico teal" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 6v12M6 12h12"></path></svg></span>
+            <h3 data-i18n="loc_h">Rumah sakit</h3>
+          </article>
+          <article class="loc reveal">
+            <span class="loc-ico orange" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="1.5"></rect><path d="M8 7h2M14 7h2M8 11h2M14 11h2M8 15h2M14 15h2"></path></svg></span>
+            <h3 data-i18n="loc_o">Kantor</h3>
+          </article>
+          <article class="loc reveal">
+            <span class="loc-ico yellow" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V10l5 3V10l5 3V8l8 5v8H3z"></path></svg></span>
+            <h3 data-i18n="loc_f">Pabrik dengan shift malam</h3>
+          </article>
+          <article class="loc reveal">
+            <span class="loc-ico red" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 10l9-5 9 5-9 5-9-5z"></path><path d="M7 12.2V16c0 1.4 2.2 2.8 5 2.8s5-1.4 5-2.8v-3.8"></path></svg></span>
+            <h3 data-i18n="loc_c">Kampus</h3>
+          </article>
+          <article class="loc reveal">
+            <span class="loc-ico teal" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21V5a1 1 0 0 1 1-1h6v17"></path><path d="M11 21V9h8a1 1 0 0 1 1 1v11"></path><path d="M7 8h2M7 12h2M14 12h2M14 16h2"></path></svg></span>
+            <h3 data-i18n="loc_a">Apartemen</h3>
+          </article>
         </div>
         <div class="cta-row" style="margin-top:22px">
           <a class="btn btn-orange" data-lead="wa" href="https://wa.me/6281398068226?text=Halo%20SAMAKAN%2C%20saya%20ingin%20tahu%20lebih%20lanjut" data-i18n="loc_cta">Jadwalkan Survei Gratis</a>
@@ -475,7 +496,13 @@
     <div class="brand-stripe footer-stripe" aria-hidden="true"></div>
     <div class="wrap footer-grid">
       <div class="footer-brand-col">
-        <img class="footer-word" src="./images/Samakan_Logo-02.png" alt="SAMAKAN by Kyojin">
+        <a href="#home" class="brand footer-brand">
+          <img class="logo-mark" src="./images/Samakan_Logo-01.png" alt="SAMAKAN">
+          <span>
+            <span class="brand-name">SAMAKAN</span>
+            <span class="brand-sub">by Kyojin</span>
+          </span>
+        </a>
         <p class="footer-desc" data-i18n="footer_desc">Mesin makanan panas 24 jam oleh PT. Dharma Abadi Kyojin.</p>
       </div>
       <nav aria-label="Footer">
