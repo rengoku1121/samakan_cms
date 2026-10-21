@@ -1,0 +1,576 @@
+{
+  "settings": {
+    "default_language": "id",
+    "show_agents": 0,
+    "show_contact_form": 0,
+    "form_url": "",
+    "whatsapp_url": "https://wa.me/6281398068226?text=Halo%20SAMAKAN%2C%20saya%20ingin%20tahu%20lebih%20lanjut",
+    "title_id": "Vending Machine Makanan Panas 24 Jam | SAMAKAN by Kyojin",
+    "title_en": "24-Hour Hot Food Vending Machine | SAMAKAN by Kyojin",
+    "description_id": "SAMAKAN: vending machine makanan panas 24 jam dengan pembayaran QRIS dan software buatan Indonesia. Untuk pemilik mesin, mitra menu, dan lokasi di Jakarta.",
+    "description_en": "SAMAKAN: a 24-hour hot food vending machine with QRIS payment and software built in Indonesia. For machine owners, menu partners, and locations in Jakarta.",
+    "og_image": "./images/machine-front-filled.jpeg",
+    "og_url": "https://www.samakan.id/"
+  },
+  "navbar": {
+    "logo_path": "./images/brand/wordmark.png",
+    "logo_alt": "SAMAKAN by Kyojin",
+    "cta_label_id": "WhatsApp",
+    "cta_label_en": "WhatsApp",
+    "cta_url": "",
+    "show_language_toggle": 1,
+    "items": [
+      { "label_id": "Beranda", "label_en": "Home", "url": "#home", "sort_order": 1, "is_active": 1 },
+      { "label_id": "Tentang", "label_en": "About", "url": "#tentang", "sort_order": 2, "is_active": 1 },
+      { "label_id": "Mesin", "label_en": "Machine", "url": "#mesin", "sort_order": 3, "is_active": 1 },
+      { "label_id": "Jadi Pemilik", "label_en": "Own One", "url": "#pemilik", "sort_order": 4, "is_active": 1 },
+      { "label_id": "Mitra Menu", "label_en": "Menu Partner", "url": "#mitra-menu", "sort_order": 5, "is_active": 1 },
+      { "label_id": "Untuk Lokasi", "label_en": "For Locations", "url": "#lokasi", "sort_order": 6, "is_active": 1 },
+      { "label_id": "Kontak", "label_en": "Contact", "url": "#kontak", "sort_order": 7, "is_active": 1 },
+      { "label_id": "Agen", "label_en": "Agent", "url": "#agen", "sort_order": 8, "is_active": 1 }
+    ]
+  },
+  "hero": {
+    "badge_id": "Vending Machine Makanan Panas 24 Jam",
+    "badge_en": "24-Hour Hot Food Vending Machine",
+    "title_id": "Buka Bisnis, Bukan Tambah Beban.",
+    "title_en": "Start a Business, Not a Burden.",
+    "title_accent_id": "Bukan Tambah Beban.",
+    "title_accent_en": "Not a Burden.",
+    "subtitle_id": "Vending machine makanan panas 24 jam dengan pembayaran QRIS dan software buatan Indonesia. Kami bantu dari pemilihan menu sampai operasional harian.",
+    "subtitle_en": "A 24-hour hot food vending machine with QRIS payment and software built in Indonesia. We help from menu selection through daily operations.",
+    "english_line": "Hot meals, 24/7. A business without the burden.",
+    "cta_label_id": "WhatsApp",
+    "cta_label_en": "WhatsApp",
+    "cta_url": "",
+    "secondary_label_id": "Lihat Cara Kerja",
+    "secondary_label_en": "See How It Works",
+    "secondary_url": "#cara-kerja",
+    "image_path": "./images/machine-hero-filled.webp",
+    "image_width": 900,
+    "image_height": 786,
+    "image_alt_id": "Vending machine makanan panas SAMAKAN dengan rak terisi",
+    "image_alt_en": "SAMAKAN hot food vending machine with stocked shelves",
+    "stickers": [
+      { "image_path": "./images/brand/steam.png", "class_name": "sticker-steam", "alt_id": "", "alt_en": "", "sort_order": 1, "is_active": 1 },
+      { "image_path": "./images/brand/chili-doodle.png", "class_name": "sticker-chili", "alt_id": "", "alt_en": "", "sort_order": 2, "is_active": 1 },
+      { "image_path": "./images/brand/rice.png", "class_name": "sticker-rice", "alt_id": "", "alt_en": "", "sort_order": 3, "is_active": 0 }
+    ]
+  },
+  "services": {
+    "items": [
+      {
+        "title_id": "24 jam",
+        "title_en": "24 hours",
+        "icon_key": "clock-24",
+        "sort_order": 1,
+        "is_active": 1
+      },
+      {
+        "title_id": "Panas dalam menit",
+        "title_en": "Hot in minutes",
+        "icon_key": "microwave",
+        "sort_order": 2,
+        "is_active": 1
+      },
+      {
+        "title_id": "Tanpa repot",
+        "title_en": "Hands-off",
+        "icon_key": "no-staff",
+        "sort_order": 3,
+        "is_active": 1
+      }
+    ]
+  },
+  "about": {
+    "badge_id": "Tentang",
+    "badge_en": "About",
+    "title_id": "Sa makan, semua makan.",
+    "title_en": "Sa makan. Everyone eats.",
+    "title_accent_id": "semua makan.",
+    "title_accent_en": "Everyone eats.",
+    "description_id": "Dari dialek Makassar, “sa makan” berarti “saya makan”. PT. Dharma Abadi Kyojin di Jakarta menghadirkan mesin makanan panas 24 jam dengan software buatan Indonesia.",
+    "description_en": "From a Makassar dialect, “sa makan” means “I eat”. PT. Dharma Abadi Kyojin in Jakarta brings 24-hour hot-meal machines with software built in Indonesia.",
+    "image_path": "./images/machine-about-filled.webp",
+    "image_width": 900,
+    "image_height": 897,
+    "image_alt_id": "Mesin SAMAKAN dari sudut, rak penuh",
+    "image_alt_en": "A SAMAKAN machine from an angle, shelves full",
+    "stickers": [
+      { "image_path": "./images/brand/spoon-fork-cream.webp", "class_name": "sticker-spoon", "alt_id": "", "alt_en": "", "sort_order": 1, "is_active": 1 }
+    ],
+    "image_chips": [
+      { "text_id": "Software buatan Indonesia", "text_en": "Software built in Indonesia", "icon_key": "gear", "sort_order": 1, "is_active": 1 },
+      { "text_id": "Jakarta, Indonesia", "text_en": "Jakarta, Indonesia", "icon_key": "pin", "sort_order": 2, "is_active": 1 }
+    ],
+    "cards": [
+      {
+        "title_id": "Misi",
+        "title_en": "Mission",
+        "description_id": "Bisnis makanan tanpa perlu pengalaman, waktu, atau staf.",
+        "description_en": "A food business without the experience, time, or staff.",
+        "icon_key": "chef",
+        "sort_order": 1,
+        "is_active": 1
+      },
+      {
+        "title_id": "Visi",
+        "title_en": "Vision",
+        "description_id": "Jaringan mesin makanan panas terdepan di Indonesia.",
+        "description_en": "Indonesia’s leading hot-meal vending network.",
+        "icon_key": "meal",
+        "sort_order": 2,
+        "is_active": 1
+      }
+    ],
+    "points": [
+      {
+        "title_id": "Makanan panas, siap dibeli",
+        "title_en": "Hot meals, ready to buy",
+        "description_id": "Disimpan dingin, dipanaskan saat dibeli, bayar QRIS.",
+        "description_en": "Stored cold, heated on purchase, paid with QRIS.",
+        "icon_key": "microwave",
+        "sort_order": 1,
+        "is_active": 0
+      },
+      {
+        "title_id": "Dari menu sampai operasional",
+        "title_en": "From menu to operations",
+        "description_id": "Kami bantu, Anda pilih seberapa ingin terlibat.",
+        "description_en": "We help; you choose how involved to be.",
+        "icon_key": "gear",
+        "sort_order": 2,
+        "is_active": 0
+      },
+      {
+        "title_id": "Satu jaringan SAMAKAN",
+        "title_en": "One SAMAKAN network",
+        "description_id": "Pemilik mesin, mitra menu, dan lokasi saling terhubung.",
+        "description_en": "Machine owners, menu partners, and locations, connected.",
+        "icon_key": "buildings",
+        "sort_order": 3,
+        "is_active": 0
+      }
+    ],
+    "audiences_title_id": "Siapa yang cocok",
+    "audiences_title_en": "Who it is for",
+    "audiences": [
+      {
+        "title_id": "Pemilik Mesin",
+        "title_en": "Machine owner",
+        "description_id": "Miliki mesin SAMAKAN dan pilih seberapa banyak Anda ingin terlibat.",
+        "description_en": "Own a SAMAKAN machine and choose how involved you want to be.",
+        "more_id": "Lihat selengkapnya",
+        "more_en": "See more",
+        "url": "#pemilik",
+        "icon_key": "thumbs",
+        "sort_order": 1,
+        "is_active": 1
+      },
+      {
+        "title_id": "Mitra Menu",
+        "title_en": "Menu partner",
+        "description_id": "Jual menu Anda di jaringan mesin, tanpa sewa dan tanpa kasir.",
+        "description_en": "Sell your menu on the machine network, with no rent and no cashier.",
+        "more_id": "Lihat selengkapnya",
+        "more_en": "See more",
+        "url": "#mitra-menu",
+        "icon_key": "chili",
+        "sort_order": 2,
+        "is_active": 1
+      },
+      {
+        "title_id": "Lokasi",
+        "title_en": "Location",
+        "description_id": "Fasilitas makan 24 jam, tanpa biaya untuk lokasi.",
+        "description_en": "A 24-hour food facility, at no cost to the location.",
+        "more_id": "Lihat selengkapnya",
+        "more_en": "See more",
+        "url": "#lokasi",
+        "icon_key": "pin",
+        "sort_order": 3,
+        "is_active": 1
+      },
+      {
+        "title_id": "Agen",
+        "title_en": "Agent",
+        "description_id": "Kenalkan SAMAKAN. Komisi dijelaskan saat pendaftaran.",
+        "description_en": "Introduce SAMAKAN. Commission is explained at registration.",
+        "more_id": "Lihat selengkapnya",
+        "more_en": "See more",
+        "url": "#agen",
+        "icon_key": "thumbs",
+        "sort_order": 4,
+        "is_active": 1
+      }
+    ]
+  },
+  "howitworks": {
+    "badge_id": "Cara Kerja",
+    "badge_en": "How It Works",
+    "title_id": "Dari layar sentuh sampai siap disantap.",
+    "title_en": "From the touchscreen to the first bite.",
+    "title_accent_id": "siap disantap.",
+    "title_accent_en": "the first bite.",
+    "description_id": "Pembeli memilih, membayar, lalu mengambil makanan yang dipanaskan di tempat.",
+    "description_en": "The buyer chooses, pays, then picks up a meal heated on the spot.",
+    "image_path": "./images/machine-about-filled.webp",
+    "image_alt_id": "Mesin SAMAKAN berisi menu",
+    "image_alt_en": "A SAMAKAN machine stocked with a menu",
+    "stickers": [
+      { "image_path": "./images/brand/steam.png", "class_name": "sticker-steam-how", "alt_id": "", "alt_en": "", "sort_order": 1, "is_active": 1 }
+    ],
+    "items": [
+      {
+        "title_id": "Pilih menu di layar sentuh",
+        "title_en": "Choose on the touchscreen",
+        "description_id": "Layar menampilkan menu yang tersedia di mesin itu.",
+        "description_en": "The screen shows the menu available in that machine.",
+        "icon_key": "meal",
+        "sort_order": 1,
+        "is_active": 1
+      },
+      {
+        "title_id": "Bayar dengan QRIS",
+        "title_en": "Pay with QRIS",
+        "description_id": "Pembayaran di mesin, tanpa kasir.",
+        "description_en": "Payment at the machine, with no cashier.",
+        "icon_key": "qris",
+        "sort_order": 2,
+        "is_active": 1
+      },
+      {
+        "title_id": "Mesin memanaskan otomatis",
+        "title_en": "The machine heats it",
+        "description_id": "Makanan dipanaskan saat dipesan, lalu siap diambil.",
+        "description_en": "The meal is heated when ordered, then ready to take.",
+        "icon_key": "microwave",
+        "sort_order": 3,
+        "is_active": 1
+      },
+      {
+        "title_id": "Ambil dan nikmati",
+        "title_en": "Take it and enjoy",
+        "description_id": "Makanan panas langsung bisa disantap.",
+        "description_en": "The hot meal is ready to eat.",
+        "icon_key": "tray",
+        "sort_order": 4,
+        "is_active": 1
+      }
+    ]
+  },
+  "gallery": {
+    "badge_id": "Mesin asli",
+    "badge_en": "The real machine",
+    "title_id": "Rak terisi. Logo terlihat.",
+    "title_en": "Shelves stocked. Logo visible.",
+    "caption_id": "Foto unit produksi—tampak depan dan sudut, siap operasional.",
+    "caption_en": "Production unit—front and angle views, ready to operate.",
+    "layout": "showcase",
+    "items": [
+      {
+        "image_path": "./images/gallery-mesin-front.webp",
+        "alt_id": "Tampak depan mesin SAMAKAN asli dengan rak terisi",
+        "alt_en": "Front view of a real SAMAKAN machine with stocked shelves",
+        "sort_order": 1,
+        "is_active": 0
+      },
+      {
+        "image_path": "./images/gallery-mesin-angle.webp",
+        "alt_id": "Mesin SAMAKAN asli dari sudut, logo dan menu terlihat",
+        "alt_en": "A real SAMAKAN machine from an angle, logo and menu visible",
+        "sort_order": 2,
+        "is_active": 0
+      },
+      {
+        "image_path": "./images/gallery-mesin-asli.webp",
+        "alt_id": "Mesin SAMAKAN asli, tampak depan dan sudut dengan rak terisi",
+        "alt_en": "Real SAMAKAN machine, front and angle views with stocked shelves",
+        "sort_order": 1,
+        "is_active": 0
+      }
+    ]
+  },
+  "machine": {
+    "badge_id": "Mesin",
+    "badge_en": "Machine",
+    "title_id": "Satu mesin. Dapur kecil yang tidak pernah tutup.",
+    "title_en": "One machine. A small kitchen that never closes.",
+    "title_accent_id": "tidak pernah tutup.",
+    "title_accent_en": "never closes.",
+    "image_path": "./images/machine-mesin-filled.webp",
+    "image_alt_id": "Tampak depan mesin SAMAKAN",
+    "image_alt_en": "Front view of a SAMAKAN machine",
+    "size_id": "Dimensi 1920 × 1793 × 972 mm, berat 450 kg.",
+    "size_en": "Dimensions 1920 × 1793 × 972 mm, weight 450 kg.",
+    "software_title_id": "Software & dashboard",
+    "software_title_en": "Software & dashboard",
+    "software_id": "Pantau dari HP, bukan dari dapur. Software dan dashboard penjualan buatan tim SAMAKAN menampilkan penjualan, stok, dan status mesin secara real-time.",
+    "software_en": "Watch it from your phone, not from a kitchen. Sales software and a dashboard built by the SAMAKAN team show sales, stock, and machine status in real time.",
+    "placement_title_id": "Kebutuhan penempatan",
+    "placement_title_en": "What the site needs",
+    "hotspots": [
+      { "spec_key": "cold", "left": "22%", "top": "30%", "sort_order": 1, "is_active": 1 },
+      { "spec_key": "portions", "left": "22%", "top": "55%", "sort_order": 2, "is_active": 1 },
+      { "spec_key": "screen", "left": "80%", "top": "16%", "sort_order": 3, "is_active": 1 },
+      { "spec_key": "pay", "left": "80%", "top": "33%", "sort_order": 4, "is_active": 1 }
+    ],
+    "specs": [
+      {
+        "spec_key": "cold",
+        "value_id": "4–8°C",
+        "value_en": "4–8°C",
+        "description_id": "Penyimpanan dingin dengan microwave otomatis",
+        "description_en": "Chilled storage with an automatic microwave",
+        "sort_order": 1,
+        "is_active": 1
+      },
+      {
+        "spec_key": "portions",
+        "value_id": "60–100",
+        "value_en": "60–100",
+        "description_id": "porsi",
+        "description_en": "portions",
+        "sort_order": 2,
+        "is_active": 1
+      },
+      {
+        "spec_key": "screen",
+        "value_id": "21,5\"",
+        "value_en": "21.5\"",
+        "description_id": "Layar sentuh",
+        "description_en": "Touchscreen",
+        "sort_order": 3,
+        "is_active": 1
+      },
+      {
+        "spec_key": "pay",
+        "value_id": "QRIS",
+        "value_en": "QRIS",
+        "description_id": "Pembayaran",
+        "description_en": "Payment",
+        "sort_order": 4,
+        "is_active": 1
+      }
+    ],
+    "placement_items": [
+      { "text_id": "Area ±2 × 1 m di dalam ruangan", "text_en": "About 2 × 1 m indoors", "sort_order": 1, "is_active": 1 },
+      { "text_id": "Stopkontak 220 V", "text_en": "A 220 V outlet", "sort_order": 2, "is_active": 1 },
+      { "text_id": "Sinyal internet stabil", "text_en": "A stable internet signal", "sort_order": 3, "is_active": 1 }
+    ]
+  },
+  "ownership": {
+    "badge_id": "Jadi Pemilik",
+    "badge_en": "Own One",
+    "title_id": "Outlet baru tanpa sewa ruko.",
+    "title_en": "A new outlet without shop rent.",
+    "title_accent_id": "tanpa sewa ruko.",
+    "title_accent_en": "without shop rent.",
+    "description_id": "Miliki mesin SAMAKAN dan pilih seberapa banyak Anda ingin terlibat.",
+    "description_en": "Own a SAMAKAN machine and choose how involved you want to be.",
+    "included_title_id": "Termasuk di setiap mesin",
+    "included_title_en": "Included with every machine",
+    "included_items": [
+      { "text_id": "Pengiriman & instalasi (Jabodetabek)", "text_en": "Delivery & installation (Greater Jakarta)", "sort_order": 1, "is_active": 1 },
+      { "text_id": "Setup software & menu", "text_en": "Software & menu setup", "sort_order": 2, "is_active": 1 },
+      { "text_id": "Pelatihan", "text_en": "Training", "sort_order": 3, "is_active": 1 },
+      { "text_id": "Akses dashboard", "text_en": "Dashboard access", "sort_order": 4, "is_active": 1 }
+    ],
+    "packages": [
+      {
+        "name": "Basic",
+        "badge_id": "",
+        "badge_en": "",
+        "description_id": "Anda menjalankan operasional; kami sediakan software, dashboard, dan dukungan teknis.",
+        "description_en": "You run operations; we provide the software, dashboard, and technical support.",
+        "accent": "",
+        "sort_order": 1,
+        "is_active": 1
+      },
+      {
+        "name": "Plus",
+        "badge_id": "",
+        "badge_en": "",
+        "description_id": "Dukungan lebih lengkap untuk pemilik yang ingin tetap mengelola sendiri.",
+        "description_en": "More complete support for owners who still want to manage it themselves.",
+        "accent": "",
+        "sort_order": 2,
+        "is_active": 1
+      },
+      {
+        "name": "Cruise",
+        "badge_id": "Kelola penuh",
+        "badge_en": "Fully managed",
+        "description_id": "Kelola penuh oleh SAMAKAN: lokasi, menu, restock, kebersihan, perawatan. Anda menerima bagi hasil penjualan bulanan.",
+        "description_en": "Fully managed by SAMAKAN: location, menu, restock, cleaning, and maintenance. You receive a monthly share of sales.",
+        "accent": "teal",
+        "sort_order": 3,
+        "is_active": 1
+      }
+    ],
+    "cta_lead_id": "Langkah berikutnya",
+    "cta_lead_en": "Next step",
+    "cta_hint_id": "Pilih paket di atas jika sudah ada preferensi (opsional). Tim SAMAKAN siap bantu penawaran dan simulasi.",
+    "cta_hint_en": "Pick a package above if you already have a preference (optional). The SAMAKAN team can help with a quote and simulation.",
+    "primary_label_id": "Minta Penawaran",
+    "primary_label_en": "Request a quote",
+    "primary_url": "",
+    "secondary_label_id": "Minta Simulasi",
+    "secondary_label_en": "Request a simulation",
+    "secondary_url": "",
+    "disclaimer_id": "Hasil penjualan bergantung pada lokasi dan permintaan. Bukan janji penghasilan.",
+    "disclaimer_en": "Sales depend on location and demand. Not a promise of income."
+  },
+  "menu_partners": {
+    "badge_id": "Mitra Menu",
+    "badge_en": "Menu Partner",
+    "title_id": "Outlet Baru Tanpa Sewa Ruko.",
+    "title_en": "A New Outlet Without Shop Rent.",
+    "title_accent_id": "Tanpa Sewa Ruko.",
+    "title_accent_en": "Without Shop Rent.",
+    "description_id": "Jual menu Anda di jaringan mesin SAMAKAN – tanpa sewa, tanpa kasir, tanpa tambah karyawan.",
+    "description_en": "Sell your menu on the SAMAKAN machine network – no rent, no cashier, no extra staff.",
+    "image_path": "./images/machine-angle-filled.jpeg",
+    "image_alt_id": "Menu di mesin SAMAKAN",
+    "image_alt_en": "A menu on a SAMAKAN machine",
+    "benefits": [
+      { "text_id": "Jangkauan 24 jam", "text_en": "24-hour reach", "icon_key": "clock-24", "sort_order": 1, "is_active": 1 },
+      { "text_id": "Tanpa biaya sewa", "text_en": "No rent", "icon_key": "house", "sort_order": 2, "is_active": 1 },
+      { "text_id": "Data penjualan per produk", "text_en": "Sales data per product", "icon_key": "card", "sort_order": 3, "is_active": 1 },
+      { "text_id": "Brand Anda tampil di layar", "text_en": "Your brand on the screen", "icon_key": "meal", "sort_order": 4, "is_active": 1 }
+    ],
+    "requirements_title_id": "Syarat menu",
+    "requirements_title_en": "Menu requirements",
+    "requirements": [
+      { "text_id": "Tahan minimal 7 hari pada suhu 4–8°C (atau sesuai frekuensi restock)", "text_en": "Lasts at least 7 days at 4–8°C (or matches the restock frequency)", "sort_order": 1, "is_active": 0 },
+      { "text_id": "Kemasan tertutup rapat dan aman microwave", "text_en": "Sealed packaging that is microwave-safe", "sort_order": 2, "is_active": 0 },
+      { "text_id": "Waktu pemanasan diuji per produk", "text_en": "Heating time tested per product", "sort_order": 3, "is_active": 0 }
+    ],
+    "scheme_id": "Skema: konsinyasi atau harga reseller; tidak ada biaya sewa.",
+    "scheme_en": "Scheme: consignment or a reseller price; no rent.",
+    "cta_label_id": "Daftar Jadi Mitra Menu",
+    "cta_label_en": "Apply as a menu partner",
+    "cta_url": ""
+  },
+  "locations": {
+    "badge_id": "Untuk Lokasi",
+    "badge_en": "For Locations",
+    "title_id": "Fasilitas makan 24 jam, tanpa biaya untuk lokasi.",
+    "title_en": "A 24-hour food facility, at no cost to the location.",
+    "points": [
+      { "text_id": "Tanpa sewa, tanpa investasi dari pihak lokasi", "text_en": "No rent and no investment from the location", "sort_order": 1, "is_active": 1 },
+      { "text_id": "Tanpa staf tambahan – restock & perawatan oleh SAMAKAN", "text_en": "No extra staff – restock and maintenance by SAMAKAN", "sort_order": 2, "is_active": 1 },
+      { "text_id": "Higienis: porsi tertutup, disimpan dingin, dipanaskan saat dibeli", "text_en": "Hygienic: sealed portions, stored cold, heated when purchased", "sort_order": 3, "is_active": 1 },
+      { "text_id": "Tanpa uang tunai – pembayaran QRIS", "text_en": "No cash – QRIS payment", "sort_order": 4, "is_active": 1 }
+    ],
+    "items": [
+      { "title_id": "Rumah sakit", "title_en": "Hospitals", "icon_key": "fresh", "sort_order": 1, "is_active": 1 },
+      { "title_id": "Kantor", "title_en": "Offices", "icon_key": "buildings", "sort_order": 2, "is_active": 1 },
+      { "title_id": "Pabrik dengan shift malam", "title_en": "Factories with night shifts", "icon_key": "gear", "sort_order": 3, "is_active": 1 },
+      { "title_id": "Kampus", "title_en": "Campuses", "icon_key": "chef", "sort_order": 4, "is_active": 1 },
+      { "title_id": "Apartemen", "title_en": "Apartments", "icon_key": "house", "sort_order": 5, "is_active": 1 }
+    ],
+    "cta_label_id": "Jadwalkan Survei Gratis",
+    "cta_label_en": "Schedule a free survey",
+    "cta_url": ""
+  },
+  "agents": {
+    "badge_id": "Agen",
+    "badge_en": "Agent",
+    "title_id": "Kenalkan SAMAKAN, dapatkan komisi.",
+    "title_en": "Introduce SAMAKAN, earn a commission.",
+    "items": [
+      { "text_id": "Gratis bergabung", "text_en": "Free to join", "sort_order": 1, "is_active": 1 },
+      { "text_id": "Tanpa target", "text_en": "No targets", "sort_order": 2, "is_active": 1 },
+      { "text_id": "Mitra independen", "text_en": "Independent partner", "sort_order": 3, "is_active": 1 },
+      { "text_id": "Komisi: penjualan mesin, lokasi baru, dan mitra menu baru (detail diberikan saat pendaftaran).", "text_en": "Commission on machine sales, new locations, and new menu partners (details at registration).", "sort_order": 4, "is_active": 1 }
+    ],
+    "rules_id": "Agen tidak menerima pembayaran, tidak memberi diskon, dan tidak menjanjikan penghasilan.",
+    "rules_en": "Agents do not take payment, do not give discounts, and do not promise income.",
+    "cta_label_id": "Daftar Jadi Agen",
+    "cta_label_en": "Apply as an agent",
+    "cta_url": ""
+  },
+  "contact": {
+    "badge_id": "Kontak",
+    "badge_en": "Contact",
+    "title_id": "Tim SAMAKAN siap membantu.",
+    "title_en": "The SAMAKAN team is ready to help.",
+    "description_id": "Pilih cara yang paling nyaman untuk Anda. Untuk pemilik mesin, mitra menu, dan lokasi.",
+    "description_en": "Pick whichever channel suits you. For machine owners, menu partners, and locations.",
+    "person": "Shyntia",
+    "role_id": "Tim SAMAKAN",
+    "role_en": "SAMAKAN team",
+    "wa_label_id": "Chat via WhatsApp",
+    "wa_label_en": "Chat on WhatsApp",
+    "company": "PT. Dharma Abadi Kyojin",
+    "phone_display": "0813-9806-8226",
+    "phone_url": "https://wa.me/6281398068226",
+    "email": "hello@samakan.id",
+    "instagram_label": "Instagram",
+    "instagram_handle": "@samakanindonesia",
+    "instagram_url": "https://instagram.com/samakanindonesia",
+    "website_label_id": "Situs",
+    "website_label_en": "Website",
+    "website_display": "www.samakan.id",
+    "website_url": "https://www.samakan.id",
+    "phone_label_id": "WhatsApp",
+    "phone_label_en": "WhatsApp",
+    "email_label_id": "Email",
+    "email_label_en": "Email",
+    "form": {
+      "title_id": "Formulir website",
+      "title_en": "Website form",
+      "description_id": "Isi formulir singkat. Tim kami menghubungi Anda via WhatsApp.",
+      "description_en": "Fill in a short form. Our team will contact you on WhatsApp.",
+      "cta_label_id": "Isi formulir",
+      "cta_label_en": "Open the form",
+      "roles": [
+        { "label_id": "Pemilik Mesin", "label_en": "Machine owner", "sort_order": 1, "is_active": 1 },
+        { "label_id": "Mitra Menu", "label_en": "Menu partner", "sort_order": 2, "is_active": 1 },
+        { "label_id": "Lokasi", "label_en": "Location", "sort_order": 3, "is_active": 1 },
+        { "label_id": "Lainnya", "label_en": "Other", "sort_order": 4, "is_active": 1 }
+      ]
+    }
+  },
+  "cta": {
+    "title_id": "Mulai outlet 24 jam Anda bersama SAMAKAN.",
+    "title_en": "Start your 24-hour outlet with SAMAKAN.",
+    "label_id": "WhatsApp",
+    "label_en": "WhatsApp",
+    "url": ""
+  },
+  "footer": {
+    "logo_path": "./images/brand/wordmark-on-dark.png",
+    "logo_alt": "SAMAKAN by Kyojin",
+    "desc_id": "Mesin makanan panas 24 jam oleh PT. Dharma Abadi Kyojin.",
+    "desc_en": "Hot meals, 24 hours, by PT. Dharma Abadi Kyojin.",
+    "menu_label_id": "Menu",
+    "menu_label_en": "Menu",
+    "contact_label_id": "Kontak",
+    "contact_label_en": "Contact",
+    "place_label_id": "Lokasi",
+    "place_label_en": "Location",
+    "contact_email": "hello@samakan.id",
+    "contact_phone": "6281398068226",
+    "contact_phone_display": "0813-9806-8226",
+    "contact_location_id": "Jakarta, Indonesia",
+    "contact_location_en": "Jakarta, Indonesia",
+    "company": "PT. Dharma Abadi Kyojin",
+    "disclaimer_id": "Hasil penjualan bergantung pada lokasi dan permintaan.",
+    "disclaimer_en": "Sales depend on location and demand.",
+    "copyright_id": "© 2026 SAMAKAN by Kyojin",
+    "copyright_en": "© 2026 SAMAKAN by Kyojin",
+    "quick_links": [
+      { "label_id": "Beranda", "label_en": "Home", "url": "#home", "sort_order": 1, "is_active": 1 },
+      { "label_id": "Tentang", "label_en": "About", "url": "#tentang", "sort_order": 2, "is_active": 1 },
+      { "label_id": "Mesin", "label_en": "Machine", "url": "#mesin", "sort_order": 3, "is_active": 1 },
+      { "label_id": "Jadi Pemilik", "label_en": "Own One", "url": "#pemilik", "sort_order": 4, "is_active": 1 },
+      { "label_id": "Mitra Menu", "label_en": "Menu Partner", "url": "#mitra-menu", "sort_order": 5, "is_active": 1 },
+      { "label_id": "Untuk Lokasi", "label_en": "For Locations", "url": "#lokasi", "sort_order": 6, "is_active": 1 },
+      { "label_id": "FAQ", "label_en": "FAQ", "url": "#faq", "sort_order": 7, "is_active": 1 },
+      { "label_id": "Kontak", "label_en": "Contact", "url": "#kontak", "sort_order": 8, "is_active": 1 },
+      { "label_id": "Agen", "label_en": "Agent", "url": "#agen", "sort_order": 9, "is_active": 1 }
+    ]
+  }
+}
